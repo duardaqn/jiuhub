@@ -1,0 +1,207 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #316225;
+    color: white;
+    padding: 15px 0;
+    padding-bottom: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header a img{
+    border-radius: 1000px;
+    width: auto;
+    height: 40px;
+}
+
+/* Menu no lado esquerdo */
+#menuButton {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+#menuButton:hover {
+    color: #ffffff;
+}
+
+/* Logo centralizada */
+.logo {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-bottom: 10px;
+    margin-top:10px;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Ícones do usuário à direita */
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+.user-options img {
+    width: 40px;
+    cursor: pointer;
+    
+}
+
+/* Menu dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajustar para a altura do cabeçalho */
+    left: 15px; /* Alinhado ao botão */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown ul li {
+    margin: 5px 0;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: #316225;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown ul li a:hover {
+    background-color: #316225;
+    color: white;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 100px 20px 20px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Título principal */
+main h1 {
+    font-size: 22px;
+    color: #316225;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.card-header .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #316225;
+    margin-bottom: 5px;
+}
+
+.card-header .class {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Botão flutuante */
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #316225;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #27501a;
+}
+
+/* Animação de entrada para o dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

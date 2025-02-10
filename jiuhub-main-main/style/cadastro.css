@@ -1,0 +1,119 @@
+/* Resetando margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #E4E4E4;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    color: gray;
+}
+
+.login-form {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.icon img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #316225;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #316225;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left; /* Alinha o texto do rótulo à esquerda */
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"] {
+    padding: 13px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+}
+
+button {
+    margin: 0 auto;
+    width: 300px;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #316225;
+    color: white;
+}
+
+button.google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    color: #000000;
+    margin-top: 10px;
+}
+
+button.google-login img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.or-container {
+    font-size: 17px;
+    color: #316225;
+    margin-top: 15px ;
+
+}
+
+.or-container span {
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
