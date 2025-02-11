@@ -1,6 +1,6 @@
 
 create database jiuhub;
-
+use jiuhub;
 CREATE TABLE login (
     id_login INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,

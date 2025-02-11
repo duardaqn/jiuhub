@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="..\style\cadastro.css"> <!-- Vinculando o CSS externo -->
 </head>
 <body>
+<form method="post" action="?page=clienteControle">
+   
     <div class="container">
         <div class="header">
             <!-- Pode adicionar algo aqui como título ou logo -->
@@ -14,26 +16,22 @@
         <div class="login-form">
             <div class="icon">
                 <img src="../img/user.png" alt="User Icon"> <!-- Substitua por um ícone de usuário -->
+          
             </div>
-            <form action="cadastro.php" method="POST">
+            <form action="editar.php" method="POST">
                 <label for="email">EMAIL:</label>
-                <input type="email" id="email" name="email" placeholder="Informe seu email" required>
+                <input type="email" id="inputEmail4" placeholder="Informe seu email" name="email" value=""required>
 
                 <label for="phone">TELEFONE:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Informe seu telefone" required>
+                <input type="tel" id="inputphone4" placeholder="Ifirme seu telefone" name="telefone" value=""required>
 
                 <label for="username">NOME DE USUÁRIO:</label>
-                <input type="text" id="username" name="username" placeholder="Escolha seu nome de usuário" required>
+                <input type="text" id="inputusarname4" placeholder="nome de usuário" name="username" value=""required>
 
                 <label for="password">SENHA:</label>
-                <input type="password" id="password" name="password" placeholder="Escolha sua senha" required>
+                <input type="password" id="inputpassword4" placeholder="Informe sua senha" name="password" value=""required>
 
-                <label for="confirm_password">CONFIRMAR SENHA:</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme sua senha" required>
-
-                <button action="teladeinicio.php" type="submit">CADASTRAR</button>
-
-                <!-- Adicionando "ou" entre os botões -->
+                <button value="<?php echo $acao?>" name="acao" type="submit" action="telainicio.php">CADASTRAR</button>
                 <div class="or-container">
                     <span>OU</span>
                 </div>
